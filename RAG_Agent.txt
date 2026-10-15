@@ -1,0 +1,17 @@
+Next release:
+- change source folder to a mix of OneDrive, teams, and ServiceNow (may be S3/Azure Blob)
+- paragraph-aware chunks, heading/section-aware chunks, semantic/hybrid chunking
+
+** Clone the GitHub repository from Power shell into the intended root folder
+** Environment checking and creation
+python --version
+python -m pip --version
+python -m venv .venv		- create the environment 
+.\.venv\Scripts\Activate.ps1	- enter the environment
+ dir *requirements*		- check if there is any filed named 'requirement' which listed the dependencies
+-- get the list of dependencies using code 'pip install ...'
+-- install those dependencies excluding the standard libraries which are available within python
+
+-- build the json file
+python .\ingestion\build_knowledge_index.py
+
